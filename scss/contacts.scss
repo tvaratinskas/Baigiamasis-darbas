@@ -1,0 +1,112 @@
+#contact {
+    @include flex-center;
+    flex-direction: column;
+    background: $orange;
+    color: $white;
+    @include section-h-w;
+    text-align: center;
+    padding: 0 150px;
+  
+    h1 {
+      padding-top: 70px;
+      font-size: 36px;
+      font-weight: 600;
+    }
+    p {
+      padding: 50px 0 30px 0;
+      font-size: 15px;
+    }
+  
+    form {
+      min-width: 300px;
+      max-width: 400px;
+      width: 100%;
+      height: auto;
+      display: flex;
+      padding: 0 65px 30px 65px;
+      flex-direction: column;
+      background: $white;
+      box-shadow: $box-shadow;
+      color: $black;
+      border-radius: 5px;
+      margin-bottom: 50px;
+      input {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid rgba($color: $black, $alpha: 0.5);
+        font-size: 15px;
+        padding-bottom: 5px;
+        margin-top: 30px;
+        &::-webkit-input-placeholder {
+          padding-left: 10px;
+        }
+      }
+      .radio-btn {
+        display: flex;
+        gap: 80px;
+        margin-top: 30px;
+  
+        .contact-radio-btn {
+          display: flex;
+          width: 15px;
+          height: 15px;
+          border: 1px solid $green;
+          border-radius: 100%;
+          position: relative;
+          transition: background 0.5s;
+          label {
+            display: flex;
+            color: rgba($color: $black, $alpha: 0.5);
+  
+            font-size: 10px;
+            font-weight: 600;
+            margin-left: 5px;
+            transition: color 0.5s;
+  
+            input::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              transform: scale(0);
+              background: $green;
+              border-radius: 100%;
+              transition: 0.5s;
+            }
+            input:checked:before {
+              transform: scale(0.6);
+            }
+            input:checked ~ .mark {
+              color: $black;
+              opacity: 1;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+  
+      .btn {
+        align-self: center;
+        margin-top: 40px;
+        min-width: 80px;
+        width: 65%;
+        height: 50px;
+        background: $green;
+        border-radius: 5px;
+        border: 1px solid $green;
+        color: $white;
+        font-size: 15px;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding: 15px;
+        transition: 0.3s;
+        &:hover {
+          transform: scale(1.1);
+          background: $orange;
+          border: 1px solid $orange;
+        }
+      }
+    }
+  }

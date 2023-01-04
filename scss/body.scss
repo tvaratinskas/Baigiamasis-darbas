@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: montserrat;
+
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    @include section-h-w;
+    margin: 0;
+    width: 100%;
+    color: $white;
+    .body-shadow {
+      box-shadow: $box-shadow;
+    }
+  }

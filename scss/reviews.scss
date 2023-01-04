@@ -1,0 +1,115 @@
+#reviews {
+    @include section-h-w;
+    color: $black;
+    padding: 0 150px;
+  
+    .reviews-header {
+      @include flex-center;
+      flex-direction: column;
+  
+      padding-top: 70px;
+      h1 {
+        font-size: 36px;
+      }
+  
+      .blue-line {
+        width: 65px;
+        background: $blue;
+        border: 1px solid $blue;
+        margin: 30px auto 70px;
+      }
+    }
+    .swiper {
+      width: 100%;
+    
+    }
+    .swiper-slide {
+      padding: 0 50px;
+      align-self: flex-end;
+      transition: 0.3s;
+      &:hover {
+        transform: translateY(20px);
+      }
+  
+      .reviews {
+        max-width: 270px;
+        min-width: 300px;
+        width: 100%;
+        background: $blue;
+        color: $white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: start;
+        box-shadow: $box-shadow;
+        &:hover {
+          box-shadow: 0px 0px 6px $orange;
+        }
+      }
+      .profile-box {
+        @include flex-center-vertical;
+        justify-content: flex-start;
+        position: relative;
+  
+        .profile-image {
+          width: 70px;
+          height: 70px;
+          border-radius: 100%;
+          background: url(../images/avatar_2_u231.png);
+          background-size: cover;
+          background-position: center;
+          margin-top: 20px;
+          &::after {
+            content: "";
+            position: absolute;
+            top: -4%;
+            right: 75%;
+            border: 15px solid transparent;
+            border-top-color: $blue;
+          }
+        }
+        .profile-info {
+          margin-top: 20px;
+          h4 {
+            color: $darkGrey;
+            padding: 5px 15px;
+            text-align: left;
+            font-size: 20px;
+            font-weight: normal;
+          }
+          p {
+            font-weight: normal;
+            font-size: 15px;
+            background: $white;
+            color: $grey;
+            padding: 0px 15px;
+          }
+        }
+      }
+    }
+  
+    .swiper-pagination-bullets {
+      position: relative;
+      margin: 90px 0 50px 0;
+    }
+    .swiper-pagination-bullet {
+      background: transparent;
+      border: 3px solid $orange;
+      width: 10px;
+      height: 10px;
+      transition: 0.3s;
+    }
+    .swiper-pagination-bullet-active {
+      background: $orange;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: $orange;
+      transition: 0.3s;
+    }
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+      color: $white;
+      text-shadow: 0 5px 5px $orange;
+      transform: scale(1.1);
+    }
+  }

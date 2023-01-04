@@ -1,0 +1,27 @@
+#social-media {
+    @include flex-center-vertical-space-btw;
+    background: $white;
+    max-width: 100%;
+    @include section-h-w;
+    padding: 0 150px;
+  
+    .media-content {
+      width: 40%;
+      h3 {
+        color: $darkGrey;
+        margin: 20px 0 5px 0;
+      }
+      p {
+        color: $grey;
+        line-height: 20px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+      }
+    }
+    .icons {
+      max-width: 500px;
+      width: 100%;
+      @include flex-space-btw;
+      height: 30px;
+    }
+  }

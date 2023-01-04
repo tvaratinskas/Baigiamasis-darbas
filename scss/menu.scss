@@ -1,0 +1,60 @@
+#menu {
+  @include section-h-w;
+  background: $white;
+  color: $blackGrey;
+  padding: 100px 150px;
+  .awesome {
+    @include flex-center-vertical;
+    flex-direction: column;
+    h2 {
+      font-size: 36px;
+      line-height: 40px;
+    }
+    .coral-devider {
+      margin: 0 50%;
+      width: 65px;
+      border: 1px solid $orange;
+      background: $orange;
+      margin: 25px 0;
+    }
+    p {
+      font-size: 15px;
+      line-height: 20px;
+      color: $grey;
+    }
+  }
+
+  .display {
+    @include flex-center;
+    text-align: center;
+    margin-top: 65px;
+    gap: 100px;
+    & > div {
+      align-self: flex-start;
+    }
+
+    h3 {
+      color: $darkGrey;
+      font-size: 20px;
+      line-height: 20px;
+      margin: 35px 0;
+    }
+    p {
+      max-width: 290px;
+      width: 100%;
+      color: $grey;
+      font-size: 15px;
+      line-height: 20px;
+    }
+    i {
+      text-align: center;
+      width: 50px;
+      height: 50px;
+      border: 1px solid $orange;
+      padding: 15px 0;
+      font-size: 20px;
+      border-radius: 100%;
+    }
+  }
+}   
+ 

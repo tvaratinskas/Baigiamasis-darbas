@@ -1,0 +1,33 @@
+footer {
+    @include flex-center-vertical-space-btw;
+    background: $lblack;
+    padding: 20px 150px;
+    .footer-icons {
+      @include flex-space-btw;
+      width: 50%;
+  
+      i {
+        font-size: 25px;
+      }
+    }
+    p {
+      text-align: end;
+      width: 30%;
+      font-size: 20px;
+      color: $white;
+      opacity: 0.5;
+    }
+  }
+  .fa-solid,
+  .fa-rss,
+  .fa-brands {
+    font-size: 30px;
+    color: $orange;
+    opacity: 0.6;
+    &:hover {
+      color: $green;
+      opacity: 0.6;
+      text-shadow: 0 0 6px $orange;
+      transform: scale(1.2);
+    }
+  }

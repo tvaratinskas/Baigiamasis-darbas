@@ -1,0 +1,119 @@
+#pricing {
+    background: $blue;
+    @include section-h-w;
+    padding: 0 150px;
+    .swiper-slide {
+      align-self: flex-end;
+    }
+    .pricing-header {
+      @include flex-center;
+      flex-direction: column;
+      padding-top: 100px;
+      h2 {
+        font-size: 36px;
+      }
+      .green-devider {
+        width: 65px;
+        border: 1px solid $green;
+        background: $green;
+        margin: 25px 0;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+    .plan {
+      max-width: 320px;
+      min-width: 230px;
+      margin: 70px auto 100px;
+      border-radius: 5px;
+      box-shadow: $box-shadow;
+      overflow: hidden;
+      transition: 0.3s;
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 10px $green;
+      }
+      .plan-header {
+        background: $darkGrey;
+        color: $white;
+        padding: 15px 0 20px 0;
+        h3 {
+          font-size: 20px;
+          text-align: center;
+          font-weight: normal;
+        }
+        .price {
+          font-size: 90px;
+          margin: 15px 0;
+          font-weight: normal;
+          span {
+            font-size: 36px;
+            margin-right: 5px;
+          }
+        }
+        p {
+          color: $white;
+          opacity: 0.5;
+          font-size: 15px;
+        }
+      }
+  
+      .plan-green-line {
+        background: $green;
+        border: 5px solid $green;
+        color: $white;
+        line-height: 30px;
+      }
+      ul {
+        li {
+          background: $white;
+          color: $grey;
+          font-size: 15px;
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+  
+  /*  Swiper css */
+  body {
+    height: 100vh;
+  }
+  .swiper {
+    width: 600px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .swiper-wrapper {
+    @include flex-center-vertical;
+  }
+  .swiper-slide {
+    width: 350px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: $green;
+    transition: 0.3s;
+  }
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    color: $white;
+    text-shadow: 0 5px 5px $green;
+    transform: scale(1.2);
+  }
+  .swiper-pagination {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    background: transparent;
+    border: 3px solid $green;
+    transition: 0.3s;
+  }
+  .swiper-pagination-bullet-active {
+    background: $green;
+    transform: scale(1.3);
+  }

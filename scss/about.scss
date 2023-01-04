@@ -1,0 +1,50 @@
+#about {
+    @include flex-center-vertical-space-btw;
+    color: $white;
+    background: $lblack;
+    @include section-h-w;
+    padding: 100px 150px;
+    .logo {
+      min-width: 45%;
+      width: 65%;
+    }
+    .about-right {
+      margin-left: 150px;
+      h2 {
+        font-size: 30px;
+        line-height: 40px;
+        width: 70%;
+      }
+      img {
+        margin: 30px 0;
+        width: 200px;
+      }
+      p {
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 40px;
+      }
+      h5 {
+        margin-bottom: 10px;
+      }
+      .about-content {
+        display: flex;
+        span {
+          margin-top: 5%;
+          @include flex-center;
+          height: 50px;
+          width: 50px;
+          padding: 15px;
+          border-radius: 100%;
+          background: $orange;
+          border: 1px solid $orange;
+          margin-right: 25px;
+        }
+        .fa-eye,
+        .fa-comment {
+          font-size: 20px;
+          color: $white;
+        }
+      }
+    }
+  }

@@ -1,0 +1,184 @@
+#header {
+    background-image: url(../images/photo-1480714378408-67cf0d13bc1b.png);
+    @include flex-center-vertical;
+    @include section-h-w;
+    @include background-repeat-position-center-size-cover;
+    position: relative;
+    top: 0;
+    padding: 150px;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba($color: $lblack, $alpha: 0.6);
+    }
+  
+    .content {
+      position: relative;
+      img {
+        width: 250px;
+        height: 110px;
+        margin-bottom: 20px;
+      }
+      h1 {
+        font-size: 36px;
+        line-height: 40px;
+        width: 70%;
+        font-weight: 600;
+      }
+      .white-devider {
+        border: 1px solid $white;
+        width: 85px;
+        background: $white;
+        margin: 30px 0;
+      }
+      p {
+        font-size: 15px;
+        line-height: 20px;
+        color: $white;
+        opacity: 0.8;
+        font-weight: 500;
+      }
+  
+      button {
+        background: transparent;
+        border: 2px solid $white;
+        color: $white;
+        margin-top: 40px;
+        width: 135px;
+        height: 40px;
+        transition: 0.3s;
+  
+        &:hover {
+          color: $orange;
+          border: 3px solid $orange;
+          cursor: pointer;
+        }
+      }
+    }
+    .container {
+      position: relative;
+      max-width: 360px;
+      width: 100%;
+      @include flex-center-vertical;
+      flex-direction: column;
+      background-color: $white;
+      border-radius: 5px;
+      margin-left: 100px;
+      color: $lblack;
+  
+      h3 {
+        text-align: center;
+        width: 100%;
+        padding: 20px 0;
+        font-size: 20px;
+        background: $white;
+        color: $darkGrey;
+        border-radius: 5px 5px 0 0;
+  
+        span {
+          color: $orange;
+        }
+      }
+      p {
+        width: 100%;
+        text-align: left;
+        padding-bottom: 20px;
+        margin-top: 30px;
+        font-weight: 700;
+      }
+      form {
+        min-width: 300px;
+        max-width: 360px;
+        @include section-h-w;
+        padding: 0 50px;
+        display: flex;
+        flex-direction: column;
+  
+        input {
+          outline: none;
+          border: none;
+          border-bottom: 1px solid $lightGrey;
+          padding-bottom: 5px;
+          margin-top: 30px;
+          font-size: 15px;
+          &::-webkit-input-placeholder {
+            padding-left: 10px;
+            color: $lightGrey;
+          }
+        }
+  
+        .radio-btn {
+          display: flex;
+          gap: 70px;
+  
+          .contact-radio-btn {
+            display: flex;
+            width: 15px;
+            height: 15px;
+            border: 1px solid $green;
+            border-radius: 100%;
+            position: relative;
+            transition: background 0.5s;
+  
+            label {
+              display: flex;
+              color: rgba($color: $black, $alpha: 0.5);
+              font-size: 10px;
+              font-weight: 600;
+              margin-left: 5px;
+              transition: color 0.5s;
+  
+              input::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                transform: scale(0);
+                background: $green;
+                border-radius: 100%;
+                transition: 0.5s;
+              }
+              input:checked:before {
+                transform: scale(0.6);
+              }
+              input:checked ~ .mark {
+                color: $black;
+                opacity: 1;
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
+      .form-submit {
+        width: 100%;
+        padding: 15px;
+        font-size: 20px;
+        border: 1px solid transparent;
+        background-image: none;
+        background-color: $green;
+        color: $white;
+        border-radius: 0 0 5px 5px;
+        margin-top: 40px;
+        transition: 0.3s;
+      }
+      .form-submit:hover {
+        cursor: pointer;
+        background-color: $orange;
+      }
+    }
+  }
+  .alert {
+    font-size: 10px;
+    font-weight: 600;
+    color: $orange;
+    margin-top: 5px;
+    padding: 0;
+  }
